@@ -1,0 +1,261 @@
+/* 1. VARIÁVEIS E RESET */
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --cor-fundo: #f8fafc;      /* Cinza bem clarinho (traz paz e não cansa como o branco puro) */
+    --cor-texto: #334155;      /* Cinza escuro (muito melhor para leitura que o preto absoluto) */
+    --cor-primaria: #0284c7;   /* Azul tranquilo e profissional */
+    --cor-secundaria: #059669; /* Verde esmeralda suave para detalhes */
+    --cor-painel: #ffffff;     /* Branco puro para destacar os blocos de conteúdo */
+    --cor-borda: #e2e8f0;      /* Cinza claro para linhas sutis */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Faz com que bordas não aumentem o tamanho total das caixas */
+}
+
+/* 2. ESTILO GERAL (BODY) */
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+}
+
+/* Títulos agora usam o azul tranquilo */
+h1, h2, h3 {
+    color: var(--cor-primaria);
+    margin-bottom: 15px;
+}
+
+/* 3. CABEÇALHO E MENU (HEADER) */
+header {
+    background-color: var(--cor-painel);
+    text-align: center;
+    padding: 40px 20px;
+    border-bottom: 3px solid var(--cor-primaria);
+    /* Uma sombra super suave para separar o cabeçalho do resto do site */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); 
+}
+
+header p {
+    color: var(--cor-texto);
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+/* A estrutura do menu continua a mesma (Flexbox) */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Botões do menu mais limpos */
+nav a {
+    text-decoration: none;
+    color: var(--cor-primaria); /* Letra azul */
+    font-weight: bold;
+    padding: 10px 20px;
+    background-color: var(--cor-fundo);
+    border: 1px solid var(--cor-borda); /* Bordinha cinza sutil */
+    border-radius: 8px; /* Cantos um pouco mais arredondados */
+    transition: 0.3s;
+}
+
+/* Hover suave e elegante */
+nav a:hover {
+    background-color: var(--cor-primaria); /* Fundo fica azul */
+    color: #ffffff; /* Letra fica branca */
+    border-color: var(--cor-primaria);
+    box-shadow: 0 4px 6px rgba(2, 132, 199, 0.2); /* Sombra azul bem fraquinha */
+}
+
+/* 4. CONTEÚDO PRINCIPAL (MAIN E SEÇÕES) */
+main {
+    max-width: 90vw; /* Impede que o site fique muito largo no PC */
+    margin: 40px auto; /* Centraliza o <main> na tela e dá um espaço no topo/fundo */
+    padding: 0 20px; /* Garante que o texto não cole nas bordas no celular */
+}
+
+/* Criando o efeito de "Cards" (Cartões) brancos */
+section {
+    background-color: var(--cor-painel);
+    padding: 30px;
+    margin-bottom: 30px; /* Espaço entre cada seção */
+    border-radius: 12px; /* Deixa as pontas arredondadas e modernas */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); /* Sombra elegante */
+    border: 1px solid var(--cor-borda);
+    
+}
+
+/* Ajuste da imagem para não quebrar o layout */
+article img {
+    max-width: 100%; /* A imagem nunca será maior que a caixa dela */
+    height: auto; /* Mantém a proporção da imagem sem achatar */
+    border-radius: 8px;
+    margin: 20px auto 0 auto; 
+    display: block; /* Tira aquele espaço vazio estranho debaixo das imagens */
+
+}
+
+/* Destacando a tag aside (Nossa Dica de Manutenção) */
+aside {
+    background-color: var(--cor-fundo); /* Fundo cinza claro para destacar */
+    padding: 20px;
+    border-left: 5px solid var(--cor-secundaria); /* Faixa verde do lado esquerdo */
+    border-radius: 4px;
+    margin: 20px 0;
+}
+
+/* 5. TABELA DE PING (MODERNA) */
+table {
+    width: 100%; /* Ocupa todo o espaço do cartão */
+    border-collapse: collapse; /* Tira o espaço duplo entre as bordas da tabela */
+    margin-top: 15px;
+}
+
+table th, table td {
+    padding: 12px 15px;
+    text-align: left; /* Alinha o texto à esquerda, muito mais fácil de ler */
+    border-bottom: 1px solid var(--cor-borda);
+}
+
+/* O Cabeçalho da tabela */
+table th {
+    background-color: var(--cor-fundo);
+    color: var(--cor-primaria);
+    font-weight: bold;
+}
+
+/* Efeito Zebrado: deixa as linhas pares com um fundo levemente cinza */
+table tbody tr:nth-child(even) {
+    background-color: #f9fafb;
+}
+
+/* Efeito ao passar o mouse na linha */
+table tbody tr:hover {
+    background-color: #f1f5f9;
+}
+
+/* 6. FORMULÁRIO E CONTROLES */
+fieldset {
+    border: 1px solid var(--cor-borda);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 25px;
+    background-color: var(--cor-fundo);
+}
+
+legend {
+    background-color: var(--cor-primaria);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+
+
+/* Estilizando os campos de digitar, selecionar e texto longo */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="number"],
+select,
+textarea {
+    width: 100%; /* Ocupam a linha inteira */
+    padding: 12px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-family: inherit; /* Puxa a mesma fonte da página */
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+/* Efeito de "foco" quando o usuário clica dentro do campo */
+input:focus, select:focus, textarea:focus {
+    outline: none; /* Tira aquela borda preta feia padrão do navegador */
+    border-color: var(--cor-primaria); /* Borda fica azul */
+    box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.2); /* Cria uma "auréola" azul clara */
+}
+
+/* Estilizando o botão de envio */
+button[type="submit"] {
+    background-color: var(--cor-secundaria); /* Usa o verde esmeralda */
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer; /* Muda o mouse para a "mãozinha" */
+    width: 100%; /* Botão grandão ocupando a tela toda */
+    transition: 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #047857; /* Um verde um pouco mais escuro no hover */
+    transform: translateY(-2px); /* Dá uma leve "levantadinha" no botão */
+}
+
+/* 7. RODAPÉ (FOOTER) */
+footer {
+    text-align: center;
+    padding: 30px 20px;
+    background-color: var(--cor-painel);
+    border-top: 1px solid var(--cor-borda);
+    color: #64748b;
+    font-size: 0.9rem;
+}
+
+/* FALTOU AQUI PRA BAIXO */
+
+/* Coloca as imagens e o texto lado a lado */
+.conteudo-flex {
+    display: flex;
+    align-items: center; /* Centraliza tudo verticalmente */
+    justify-content: space-between; /* Garante que as pontas encostem nas bordas */
+    gap: 20px; 
+}
+
+/* O texto ocupa todo o espaço que sobrar no meio */
+.conteudo-flex .texto {
+    flex: 1; 
+    padding: 0 15px; /* Dá um respiro lateral para o texto não colar nas fotos */
+}
+
+/* Deixando as imagens com cara de portal profissional */
+.conteudo-flex img {
+    width: 30%; /* Define uma largura equilibrada para as duas imagens */
+    height: 300px; /* Trava a altura para ambas ficarem alinhadas */
+    object-fit: cover; /* Faz a mágica de cortar as sobras da imagem sem achatar */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil para destacar a foto */
+    margin: 0; 
+}
+
+/* Responsividade para Celulares */
+@media (max-width: 768px) {
+    .conteudo-flex {
+        flex-direction: column; /* Coloca um embaixo do outro */
+        text-align: center; 
+    }
+    
+    .conteudo-flex img {
+        width: 100%; /* No celular, as imagens ocupam a tela toda */
+        height: auto; /* Deixa a altura livre para não cortar demais no mobile */
+        max-height: 350px;
+        margin-top: 15px;
+    }
+}

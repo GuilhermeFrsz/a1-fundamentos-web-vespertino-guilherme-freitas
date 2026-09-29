@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roraima Geek: Animes e Games no Extremo Norte</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Portal Roraima Geek</h1>
+        <p>O ponto de encontro para otakus, gamers e sobreviventes do ping alto na Linha do Equador.</p>
+        <nav>
+            <ul>
+                <li><a href="#cenario">A Cena Local</a></li>
+                <li><a href="#dicas-hardware">Sobrevivência Gamer</a></li>
+                <li><a href="#tabela-ping">Tabela do Ping</a></li>
+                <li><a href="#guilda">Aliste-se na Guilda</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        
+        <!-- Seção 1: Introdução -->
+        <section id="cenario">
+            <h2>O Cenário Geek em Boa Vista</h2>
+            <article class="conteudo-flex">
+                <img src="assets/imagem1.jpg" alt="Imagem mostrando uma moça no evento geek">
+                
+                <div class="textO">
+                    <h3>Cosplay ao Meio-Dia</h3>
+                    <p>Ser otaku e gamer em Roraima é para os fortes. Fazer cosplay com roupa de couro na Praça das Águas exige resistência, e as reviravoltas dos nossos eventos locais dariam uma verdadeira peça de Ariano Suassuna. Mas a paixão pela cultura pop vence qualquer barreira (ou temperatura).</p>
+                </div>
+                <img src="assets/anuncio.jpg" alt="Imagem anunciando evento geek">
+            </article>
+        </section>
+
+        <!-- Seção 2: Dicas (Usando Aside) -->
+        <section id="dicas-hardware">
+            <h2>O Boss Final: O Superaquecimento</h2>
+            <p>Nenhum dragão ou vilão de anime dá tanto medo quanto o seu PC ou celular chegando a 90°C no verão macuxi.</p>
+            
+            <aside>
+                <h3>Manutenção é Vida</h3>
+                <p>Aqui, saber limpar e trocar a pasta térmica do notebook não é luxo, é necessidade básica. Até remover os aplicativos inúteis (bloatwares) de fábrica do celular via ADB ajuda a economizar memória para rodar os jogos pesados sem o aparelho derreter nas mãos.</p>
+            </aside>
+            
+            <article>
+                <h3>Trilha Sonora do Rage</h3>
+                <p>Quando a partida ranqueada cai por causa da luz ou o FPS despenca, a única solução é colocar um Linkin Park no fone e tentar não quebrar o teclado antes da reconexão.</p>
+            </article>
+        </section>
+
+        <!-- Seção 3: Tabela Semântica -->
+        <section id="tabela-ping">
+            <h2>Realidade da Conexão: Roraima vs Resto do Brasil</h2>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Estilo de Jogo</th>
+                        <th>Ping Sul/Sudeste (ms)</th>
+                        <th>Ping Boa Vista (ms)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>FPS (Tiro) / Valorant</td>
+                        <td>15 a 30</td>
+                        <td>80 a 120 (Mínimo histórico)</td>
+                    </tr>
+                    <tr>
+                        <td>MMORPG / Mundo Aberto</td>
+                        <td>20</td>
+                        <td>150 (Jogando no passado)</td>
+                    </tr>
+                    <tr>
+                        <td>Mobile / Gacha</td>
+                        <td>10</td>
+                        <td>60 a 90 (Até que vai)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Seção 4: Formulário Completo -->
+        <section id="guilda">
+            <h2>Aliste-se na Guilda Macuxi</h2>
+            <p>Preencha a ficha para participar dos nossos campeonatos locais e encontros de anime.</p>
+            
+            <form action="#" method="POST">
+                <fieldset>
+                    <legend>Dados do Jogador/Otaku</legend>
+                    
+                    <!-- 1. Text -->
+                    <label for="nickname">Nickname (Nome de Usuário):</label><br>
+                    <input type="text" id="nickname" name="nickname" required minlength="3" maxlength="20"><br><br>
+
+                    <!-- 2. Email -->
+                    <label for="emailContato">E-mail (para convites no Discord):</label><br>
+                    <input type="email" id="emailContato" name="emailContato" required><br><br>
+
+                    <!-- 3. Tel com Pattern (Formatado para DDD 95) -->
+                    <label for="whatsapp">WhatsApp (Apenas DDD 95):</label><br>
+                    <input type="tel" id="whatsapp" name="whatsapp" required pattern="^\(95\)\s9\d{4}-\d{4}$" title="Digite no formato (95) 9XXXX-XXXX"><br><br>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Perfil Geek</legend>
+                    
+                    <!-- 4. Date -->
+                    <label for="dataDespertar">Data em que assistiu seu primeiro anime:</label><br>
+                    <input type="date" id="dataDespertar" name="dataDespertar" required><br><br>
+
+                    <!-- 5. Number -->
+                    <label for="fpsMedio">Qual sua média de FPS rodando jogos no calor?</label><br>
+                    <input type="number" id="fpsMedio" name="fpsMedio" min="10" max="240" required><br><br>
+
+                    <!-- 6. Select -->
+                    <label for="classeGeek">Escolha sua Classe Principal:</label><br>
+                    <select id="classeGeek" name="classeGeek" required>
+                        <option value="">Selecione sua classe...</option>
+                        <option value="pc-gamer">PC Gamer (Guerreiro do Hardware)</option>
+                        <option value="mobile">Gamer Mobile (Mago do Celular)</option>
+                        <option value="cosplayer">Cosplayer (Mestre dos Disfarces)</option>
+                        <option value="colecionador">Colecionador (Sábio dos Mangás)</option>
+                    </select><br><br>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Juramento da Guilda</legend>
+
+                    <!-- 7. Textarea -->
+                    <label for="historiaGeek">Qual seu anime/jogo favorito e por quê?</label><br>
+                    <textarea id="historiaGeek" name="historiaGeek" rows="4" cols="50" required minlength="15" maxlength="300" placeholder="O jogo que marcou minha vida foi..."></textarea><br><br>
+
+                    <!-- 8. Checkbox -->
+                    <input type="checkbox" id="aceitoLag" name="aceitoLag" required>
+                    <label for="aceitoLag">Prometo não dar "rage quit" se o ping subir para 200ms no meio da partida por causa da rota de internet.</label><br><br>
+                </fieldset>
+
+                <!-- Botão de Envio -->
+                <button type="submit">Entrar para a Guilda</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Desenvolvido por @guilhermefrsz. &copy; 2026 Portal Roraima Geek.</p>
+    </footer>
+
+</body>
+</html>
