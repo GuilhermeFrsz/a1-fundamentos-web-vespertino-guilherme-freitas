@@ -150,6 +150,7 @@ fieldset {
     border-radius: 8px;
     padding: 20px;
     margin-bottom: 25px;
+    margin-top: 10px;
     background-color: var(--cor-fundo);
 }
 
