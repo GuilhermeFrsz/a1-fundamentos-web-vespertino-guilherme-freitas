@@ -182,6 +182,7 @@ textarea {
     font-family: inherit; /* Puxa a mesma fonte da página */
     font-size: 1rem;
     transition: 0.3s;
+    resize: none;
 }
 
 /* Efeito de "foco" quando o usuário clica dentro do campo */
@@ -246,8 +247,17 @@ footer {
     margin: 0; 
 }
 
+
+
+
+
+
+
 /* Responsividade para Celulares */
+/* Responsividade para Celulares (Telas menores que 768px) */
 @media (max-width: 768px) {
+    
+    /* 1. Ajustes do Flexbox (O que já tínhamos) */
     .conteudo-flex {
         flex-direction: column; /* Coloca um embaixo do outro */
         text-align: center; 
@@ -258,5 +268,64 @@ footer {
         height: auto; /* Deixa a altura livre para não cortar demais no mobile */
         max-height: 350px;
         margin-top: 15px;
+    }
+
+    /* 2. Otimização de Espaço nos Cartões e Topo */
+    header {
+        padding: 20px 10px; /* Diminui aquele espaço em branco gigante no topo */
+    }
+
+    section {
+        padding: 15px; /* Reduz o espaço interno dos cartões brancos */
+        margin-bottom: 20px;
+    }
+
+    main {
+        margin: 20px auto; /* Reduz a margem geral da página */
+        width: 95vw; /* Deixa o cartão um pouco mais largo no celular */
+    }
+
+    /* 3. Redução Inteligente de Fontes */
+    h1 {
+        font-size: 1.6rem; /* Título principal do site menor */
+    }
+    
+    h2 {
+        font-size: 1.3rem; /* Títulos de cada seção menores */
+    }
+    
+    h3 {
+        font-size: 1.1rem; /* Subtítulos menores */
+    }
+
+    header p {
+        font-size: 0.95rem; /* Subtítulo do cabeçalho levemente menor */
+    }
+
+    /* 4. Ajuste dos Botões do Menu */
+    nav ul {
+        gap: 10px; /* Reduz o espaço entre os botões */
+    }
+
+    nav a {
+        padding: 8px 12px; /* Deixa os botões menos gordinhos */
+        font-size: 0.9rem; /* Fonte do menu um pouco menor */
+    }
+    /* Container para a tabela não vazar no celular */
+    .tabela-responsiva {
+        width: 100%;
+        overflow-x: auto; /* Cria a barra de rolagem horizontal se não couber */
+        -webkit-overflow-scrolling: touch; /* Deixa a rolagem suave nos celulares (iPhone/Android) */
+    }
+    fieldset textarea {
+        padding: 12px;
+        margin-top: 5px;
+        margin-bottom: 15px;
+        border: 1px solid #cbd5e1;
+        border-radius: 6px;
+        font-family: inherit; /* Puxa a mesma fonte da página */
+        font-size: 1rem;
+        transition: 0.3s;
+        resize: none;
     }
 }

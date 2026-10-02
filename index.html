@@ -29,7 +29,7 @@
             <article class="conteudo-flex">
                 <img src="assets/anuncio.jpg" alt="Imagem anunciando evento geek">
                 
-                <div class="textO">
+                <div class="texto">
                     <h3>Cosplay ao Meio-Dia</h3>
                     <p>Ser otaku e gamer em Roraima é para os fortes. Fazer cosplay com roupa de couro na Praça das Águas exige resistência, e as    reviravoltas dos nossos eventos locais dariam uma verdadeira peça de Ariano Suassuna. Mas a paixão pela cultura pop vence qualquer barreira (ou temperatura).</p>
                 </div>
@@ -54,34 +54,40 @@
         </section>
 
         <!-- Seção 3: Tabela Semântica -->
+       <!-- Seção 3: Tabela Semântica -->
         <section id="tabela-ping">
             <h2>Realidade da Conexão: Roraima vs Resto do Brasil</h2>
-            <table border="1">
-                <thead>
-                    <tr>
-                        <th>Estilo de Jogo</th>
-                        <th>Ping Sul/Sudeste (ms)</th>
-                        <th>Ping Boa Vista (ms)</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>FPS (Tiro) / Valorant</td>
-                        <td>15 a 30</td>
-                        <td>80 a 120 (Mínimo histórico)</td>
-                    </tr>
-                    <tr>
-                        <td>MMORPG / Mundo Aberto</td>
-                        <td>20</td>
-                        <td>150 (Jogando no passado)</td>
-                    </tr>
-                    <tr>
-                        <td>Mobile / Gacha</td>
-                        <td>10</td>
-                        <td>60 a 90 (Até que vai)</td>
-                    </tr>
-                </tbody>
-            </table>
+            
+            <!-- ADICIONE ESTA DIV AQUI EM VOLTA DA TABELA -->
+            <div class="tabela-responsiva">
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <th>Estilo de Jogo</th>
+                            <th>Ping Sul/Sudeste (ms)</th>
+                            <th>Ping Boa Vista (ms)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- ... os seus <tr> continuam aqui normalmente ... -->
+                        <tr>
+                            <td>FPS (Tiro) / Valorant</td>
+                            <td>15 a 30</td>
+                            <td>80 a 120 (Mínimo histórico)</td>
+                        </tr>
+                        <tr>
+                            <td>MMORPG / Mundo Aberto</td>
+                            <td>20</td>
+                            <td>150 (Jogando no passado)</td>
+                        </tr>
+                        <tr>
+                            <td>Mobile / Gacha</td>
+                            <td>10</td>
+                            <td>60 a 90 (Até que vai)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div> <!-- FECHE A DIV AQUI -->
         </section>
 
         <!-- Seção 4: Formulário Completo -->
@@ -133,7 +139,7 @@
 
                     <!-- 7. Textarea -->
                     <label for="historiaGeek">Qual seu anime/jogo favorito e por quê?</label><br>
-                    <textarea id="historiaGeek" name="historiaGeek" rows="4" cols="50" required minlength="15" maxlength="300" placeholder="O jogo que marcou minha vida foi..."></textarea><br><br>
+                    <textarea id="historiaGeek" name="historiaGeek"  placeholder="O jogo que marcou minha vida foi..."></textarea><br><br>
 
                     <!-- 8. Checkbox -->
                     <input type="checkbox" id="aceitoLag" name="aceitoLag" required>
